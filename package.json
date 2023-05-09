@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "cm": "cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/format": "^17.4.4",
+    "@commitlint/prompt-cli": "^17.6.3",
+    "@commitlint/types": "^17.4.4",
+    "commitlint": "^17.6.3",
+    "conventional-changelog-atom": "^2.0.8",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
