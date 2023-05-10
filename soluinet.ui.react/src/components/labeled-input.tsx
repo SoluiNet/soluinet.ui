@@ -57,7 +57,7 @@ class LabeledInput extends React.Component<LabeledInputArguments, LabeledInputSt
     constructor(props: LabeledInputArguments) {
         super(props);
 
-        this.id = props.id ? props.id : Math.floor(Date.now() * Math.random()).toString();
+        this.id = props.id ? props.id : `sn-input-${Math.floor(Date.now() * Math.random()).toString()}`;
         this.icon = props.icon ? props.icon : (<RxTextAlignLeft />);
 
         this.state = {
