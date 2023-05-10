@@ -1,0 +1,60 @@
+:root {
+    --active-color: teal;
+    --bg-color: #fff;
+    --front-color: #000;
+}
+
+.sn-labeled-input {
+    position: relative;
+    margin-bottom: 1.25rem;
+
+    & :is(label, span) {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        pointer-events: none;
+        color: rgb(0 0 0 / 50%);
+        transition: 0.3s;
+    }
+
+    &>label {
+        left: 10px;
+        translate: 0 -50%;
+        padding: 4px 8px;
+    }
+
+    &>span {
+        right: 16px;
+        font-size: 28px;
+    }
+
+    &>input {
+        height: 56px;
+        /* width: 220px; */
+        width: calc(100% - 16px);
+        padding-left: 16px;
+        border: 2px solid #888;
+        border-radius: 8px;
+        background: transparent;
+        color: var(--front-color);
+    }
+
+    &>[type="date"]:not(input:focus, .has-value[type="date"]) {
+        color: transparent;
+        -webkit-appearance: none;
+    }
+
+    &> :is(input:focus, .has-value) {
+        border-color: var(--active-color);
+
+        &~span {
+            color: rgb(0 0 0 / 50%);
+        }
+
+        &~label {
+            background: var(--bg-color);
+            color: rgb(0 0 0 / 85%);
+            translate: 0 -46px;
+        }
+    }
+}
