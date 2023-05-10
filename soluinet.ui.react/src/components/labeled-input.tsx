@@ -1,5 +1,5 @@
 import * as React from "react";
-import { RxTextAlignLeft} from "react-icons/rx";
+import { RxTextAlignLeft } from "react-icons/rx";
 
 /**
  * The interface for the arguments of the LabeledInput.
@@ -20,7 +20,7 @@ interface LabeledInputArguments {
      * @property {string} value The value.
      */
     value?: string;
-    
+
     /**
      * The icon.
      * 
@@ -54,10 +54,10 @@ class LabeledInput extends React.Component<LabeledInputArguments, LabeledInputSt
      * @param {LabeledInputArguments} props The properties.
      * @returns {LabeledInput} A LabeledInput component instance.
      */
-    constructor(props: LabeledInputArguments){
+    constructor(props: LabeledInputArguments) {
         super(props);
 
-        this.id = props.id ? props.id : parseInt(Date.now() * Math.random()).toString();
+        this.id = props.id ? props.id : Math.floor(Date.now() * Math.random()).toString();
         this.icon = props.icon ? props.icon : (<RxTextAlignLeft />);
 
         this.state = {
@@ -70,34 +70,33 @@ class LabeledInput extends React.Component<LabeledInputArguments, LabeledInputSt
      * 
      * @returns {JSX.Element} The rendered labeled input.
      */
-    render(){
+    render() {
         return (
-<div className="sn-labeled-input">
-<input
-  id={this.id}
-  type="text"
-  className={this.state.value ? "has-value" : ""}
-  value={
-    this.state.value ? this.state.value : ""
-  }
-  onInput={(event: React.FormEvent<HTMLInputElement>) =>
-    (event.target as HTMLInputElement).classList.toggle(
-      "has-value",
-      (event.target as HTMLInputElement).value ? true : false,
-    )
-  }
-  onChange={(event) =>
-  {
-    this.setState({ value: event.target.value });
-  }}
-/>
-<span className={`${this.id}-icon`}>
-  {this.icon}
-</span>
-<label htmlFor={this.id}>Number</label>
-</div>
+            <div className="sn-labeled-input">
+                <input
+                    id={this.id}
+                    type="text"
+                    className={this.state.value ? "has-value" : ""}
+                    value={
+                        this.state.value ? this.state.value : ""
+                    }
+                    onInput={(event: React.FormEvent<HTMLInputElement>) =>
+                        (event.target as HTMLInputElement).classList.toggle(
+                            "has-value",
+                            (event.target as HTMLInputElement).value ? true : false,
+                        )
+                    }
+                    onChange={(event) => {
+                        this.setState({ value: event.target.value });
+                    }}
+                />
+                <span className={`${this.id}-icon`}>
+                    {this.icon}
+                </span>
+                <label htmlFor={this.id}>Number</label>
+            </div>
         );
-}
+    }
 }
 
 export default LabeledInput;
