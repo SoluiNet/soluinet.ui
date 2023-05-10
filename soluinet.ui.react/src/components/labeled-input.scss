@@ -42,6 +42,7 @@
     &>[type="date"]:not(input:focus, .has-value[type="date"]) {
         color: transparent;
         -webkit-appearance: none;
+        appearance: none;
     }
 
     &> :is(input:focus, .has-value) {
