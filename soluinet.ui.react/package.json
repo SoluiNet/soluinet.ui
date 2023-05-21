@@ -1,6 +1,6 @@
 {
   "name": "soluinet.ui.react",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -32,12 +32,10 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0"
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "react-icons": "^4.8.0"
-  }
+  ]
 }
