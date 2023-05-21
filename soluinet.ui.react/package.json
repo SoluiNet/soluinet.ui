@@ -10,7 +10,9 @@
   },
   "keywords": [
     "ui",
-    "library"
+    "library",
+    "react",
+    "input"
   ],
   "author": "",
   "license": "MIT",
