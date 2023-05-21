@@ -1,13 +1,17 @@
 {
   "name": "soluinet.ui.react",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
+    "format": "prettier **/*.{js,jsx,ts,tsx,scss,css} -w && eslint . --fix",
+    "build": "npm run format && rollup -c --bundleConfigAsCjs",
     "start": "rollup -c -w"
   },
-  "keywords": ["ui", "library"],
+  "keywords": [
+    "ui",
+    "library"
+  ],
   "author": "",
   "license": "MIT",
   "homepage": "https://github.com/SoluiNet/soluinet.ui",
@@ -21,8 +25,17 @@
   "devDependencies": {
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-jsdoc": "^44.2.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.21.6",
@@ -37,5 +50,196 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jsdoc/recommended-error",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "ecmaVersion": "latest",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "ignorePatterns": [
+      "**/*.config.js",
+      "!**/eslint.config.js",
+      "dist/**/*"
+    ],
+    "plugins": [
+      "react",
+      "react-hooks",
+      "jsdoc",
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-spacing": [
+        "error",
+        {
+          "before": true,
+          "after": true
+        }
+      ],
+      "brace-style": [
+        "error",
+        "allman"
+      ],
+      "curly": [
+        "error",
+        "all"
+      ],
+      "eol-last": [
+        "error",
+        "never"
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "jsdoc/check-values": "error",
+      "jsdoc/require-description": "error",
+      "jsdoc/require-jsdoc": [
+        "error",
+        {
+          "contexts": [
+            "ArrowFunctionExpression",
+            "FunctionDeclaration",
+            "FunctionExpression",
+            "MethodDefinition",
+            "Property",
+            "TSDeclareFunction",
+            "TSEnumDeclaration",
+            "TSInterfaceDeclaration",
+            "TSMethodSignature",
+            "TSPropertySignature",
+            "TSTypeAliasDeclaration",
+            "VariableDeclaration"
+          ],
+          "publicOnly": true,
+          "require": {
+            "ArrowFunctionExpression": true,
+            "ClassDeclaration": true,
+            "ClassExpression": true,
+            "FunctionDeclaration": true,
+            "FunctionExpression": true,
+            "MethodDefinition": true
+          }
+        }
+      ],
+      "operator-linebreak": [
+        "error",
+        "before"
+      ],
+      "prefer-const": "error",
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": "error",
+      "space-before-blocks": [
+        "error",
+        {
+          "functions": "never",
+          "keywords": "never",
+          "classes": "never"
+        }
+      ],
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": false,
+          "ignoreDeclarationSort": false,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": [
+            "all",
+            "multiple",
+            "single",
+            "none"
+          ],
+          "allowSeparatedGroups": false
+        }
+      ],
+      "@typescript-eslint/brace-style": [
+        "error",
+        "allman"
+      ],
+      "@typescript-eslint/no-inferrable-types": "off",
+      "@typescript-eslint/no-namespace": "off",
+      "@typescript-eslint/space-before-blocks": [
+        "error",
+        {
+          "functions": "never",
+          "keywords": "never",
+          "classes": "never"
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
+    "globals": {
+      "JSX": "readonly"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "staging": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": false,
+    "bracketSameLine": false,
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": "*.ts,*.tsx,*.js,*.jsx",
+        "options": {
+          "editorconfig": true
+        }
+      },
+      {
+        "files": "*.css,*.scss",
+        "options": {
+          "editorconfig": true
+        }
+      }
+    ]
+  }
 }

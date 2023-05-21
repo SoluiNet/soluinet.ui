@@ -1,4 +1,12 @@
-import * as React from 'react'
-import InputWithLabel from './components/labeled-input'
+import * as React from "react";
+import InputWithLabel from "./components/labeled-input";
+import "root.scss";
 
-export const LabeledInput = () => (<InputWithLabel></InputWithLabel>);
+/**
+ * The labeled input.
+ * @returns {InputWithLabel} The labeled input.
+ */
+export const LabeledInput = () => 
+{
+  return <InputWithLabel></InputWithLabel>;
+};
