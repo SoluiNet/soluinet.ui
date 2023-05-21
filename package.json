@@ -16,12 +16,19 @@
     "commitlint": "^17.6.3",
     "conventional-changelog-atom": "^2.0.8",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "lint-staged":{
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
