@@ -231,7 +231,7 @@
     "useTabs": false,
     "overrides": [
       {
-        "files": "*.ts,*.tsx,*.js,*.jsx",
+        "files": "*.ts,*.tsx,*.js,*.jsx,*.json",
         "options": {
           "editorconfig": true
         }
