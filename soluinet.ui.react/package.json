@@ -1,15 +1,23 @@
 {
   "name": "soluinet.ui.react",
-  "version": "0.9.0",
-  "description": "",
+  "version": "0.9.1",
+  "description": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "start": "rollup -c -w"
   },
-  "keywords": [],
+  "keywords": ["ui", "library"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/SoluiNet/soluinet.ui",
+  "bugs": {
+    "url": "https://github.com/SoluiNet/soluinet.ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoluiNet/soluinet.ui.git"
+  },
   "devDependencies": {
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
