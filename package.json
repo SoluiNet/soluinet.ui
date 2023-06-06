@@ -11,7 +11,7 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.5",
     "@commitlint/format": "^17.4.4",
-    "@commitlint/prompt-cli": "^17.6.3",
+    "@commitlint/prompt-cli": "^17.6.5",
     "@commitlint/types": "^17.4.4",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.8",
