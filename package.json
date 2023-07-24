@@ -13,7 +13,7 @@
     "@commitlint/format": "^17.4.4",
     "@commitlint/prompt-cli": "^17.6.6",
     "@commitlint/types": "^17.4.4",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^5.61.0",
     "commitlint": "^17.6.6",
     "conventional-changelog-atom": "^3.0.0",
