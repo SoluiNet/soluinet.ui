@@ -41,7 +41,7 @@ interface LabeledInputState
 }
 
 /**
- *
+ * The labeled input.
  */
 class LabeledInput extends React.Component<LabeledInputArguments, LabeledInputState>
 {

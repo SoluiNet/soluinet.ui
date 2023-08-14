@@ -41,7 +41,7 @@ interface MenuState
 }
 
 /**
- *
+ * The menu.
  */
 class Menu extends React.Component<MenuArguments, MenuState>
 {
@@ -68,9 +68,9 @@ class Menu extends React.Component<MenuArguments, MenuState>
 
   /**
    * Handle a menu toggle.
-   * @param {React.MouseEvent<HTMLButtonElement>} event The event.
+   * @param {React.MouseEvent<HTMLButtonElement>} _event The event.
    */
-  toggleMenu(event: React.MouseEvent<HTMLButtonElement>)
+  toggleMenu(_event: React.MouseEvent<HTMLButtonElement>)
   {
     (document.getElementById(this.id) as HTMLDivElement).classList.toggle("open");
   }

@@ -1,4 +1,5 @@
 import * as React from "react";
+import ErrorHandling from "./behaviour/error-handling";
 import InputWithLabel from "./components/labeled-input";
 import MenuComponent from "./components/menu";
 import "root.scss";
@@ -19,4 +20,13 @@ export const LabeledInput = () =>
 export const Menu = () => 
 {
   return <MenuComponent></MenuComponent>;
+};
+
+/**
+ * The error handler.
+ * @returns {ErrorHandling} The error handler.
+ */
+export const ErrorHandler = () => 
+{
+  return new ErrorHandling();
 };
