@@ -1,5 +1,6 @@
 import * as React from "react";
 import InputWithLabel from "./components/labeled-input";
+import MenuComponent from "./components/menu";
 import "root.scss";
 
 /**
@@ -9,4 +10,13 @@ import "root.scss";
 export const LabeledInput = () => 
 {
   return <InputWithLabel></InputWithLabel>;
+};
+
+/**
+ * The menu.
+ * @returns {MenuComponent} The menu.
+ */
+export const Menu = () => 
+{
+  return <MenuComponent></MenuComponent>;
 };

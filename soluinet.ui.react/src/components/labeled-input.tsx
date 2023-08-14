@@ -1,5 +1,6 @@
 import * as React from "react";
 import { RxTextAlignLeft } from "react-icons/rx";
+import "labeled-input.scss";
 
 /**
  * The interface for the arguments of the LabeledInput.

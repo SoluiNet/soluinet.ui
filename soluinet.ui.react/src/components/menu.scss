@@ -1,0 +1,107 @@
+:root {
+  --menu-background-color: transparent;
+  --menu-color: #f9f9f9;
+  --menu-content-background-color: #272e3c;
+  --menu-content-button-color: #f7f7f7;
+  --menu-content-button-first-background-color: #8700ff;
+  --menu-content-button-second-background-color: #ff009e;
+  --menu-content-heading-color: #989cad;
+  --menu-content-shadow-color: rgb(0 0 0 / 70%);
+  --menu-overlay-background-color: rgb(27 32 44 / 70%);
+}
+
+.sn-menu {
+  aside {
+    background: var(--menu-content-background-color);
+    box-shadow: 0 0 20px var(--menu-content-shadow-color);
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
+    translate: 100% 0;
+    width: 260px;
+    z-index: 2;
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+
+    button {
+      background: linear-gradient(-60deg, var(--menu-content-button-first-background-color), var(--menu-content-button-second-background-color));
+      border: 0;
+      border-radius: 30px;
+      color: var(--menu-content-button-color);
+      font-family: inherit;
+      font-size: 16px;
+      height: 60px;
+      margin-top: 20px;
+    }
+
+    h3 {
+      color: var(--menu-content-heading-color);
+      font-size: 16px;
+      font-weight: 400;
+      margin: 40px 0 10px;
+    }
+  }
+
+  .burger {
+    background: var(--menu-background-color);
+    border: 0;
+    color: var(--menu-color);
+    cursor: pointer;
+    display: grid;
+    font-size: 30px;
+    height: 82px;
+    padding: 0;
+    place-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 82px;
+    z-index: 3;
+
+    i:last-child {
+      display: none;
+    }
+  }
+
+  &.open {
+    aside {
+      translate: 0;
+    }
+
+    .burger {
+      i:first-child {
+        display: none;
+      }
+
+      i:last-child {
+        display: block;
+      }
+    }
+
+    .overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .overlay {
+    backdrop-filter: blur(6px);
+    background: var(--menu-overlay-background-color);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    transition: 0.3s;
+    top: 0;
+    visibility: hidden;
+    z-index: 2;
+  }
+}

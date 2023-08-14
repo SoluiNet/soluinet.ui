@@ -71,7 +71,7 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-      "project": "./tsconfig.json",
+      "project": "./soluinet.ui.react/tsconfig.json",
       "ecmaVersion": "latest",
       "ecmaFeatures": {
         "jsx": true
