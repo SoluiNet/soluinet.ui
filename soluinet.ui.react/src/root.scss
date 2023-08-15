@@ -1,0 +1,25 @@
+:root {
+    --sn-ui-back-primary-color: ##fff;
+    --sn-ui-back-secondary-color: ##ccc;
+    --sn-ui-back-tertiary-color: #eee;
+    --sn-ui-front-primary-color: ##fff;
+    --sn-ui-front-secondary-color: #888;
+    --sn-ui-front-tertiary-color: #333;
+    --sn-ui-highlight-primary-color: teal;
+    --sn-ui-highlight-secondary-color: turquoise;
+    --sn-ui-highlight-tertiary-color: darkblue;
+    --sn-ui-highlight-front-color: #fff;
+}
+
+.dark-mode {
+    --sn-ui-back-primary-color: #000;
+    --sn-ui-back-secondary-color: #888;
+    --sn-ui-back-tertiary-color: #333;
+    --sn-ui-front-primary-color: #ccc;
+    --sn-ui-front-secondary-color: #fff;
+    --sn-ui-front-tertiary-color: #eee;
+    --sn-ui-highlight-primary-color: teal;
+    --sn-ui-highlight-secondary-color: turquoise;
+    --sn-ui-highlight-tertiary-color: darkblue;
+    --sn-ui-highlight-front-color: #fff;
+}
