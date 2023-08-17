@@ -1,7 +1,7 @@
 :root {
-  --lbl-input-active-color: var(--sn-ui-highlight-primary-color);
-  --lbl-input-back-color: var(--sn-ui-back-primary-color);
-  --lbl-input-front-color: var(--sn-ui-front-primary-color);
+  --sn-ui-lbl-input-active-color: var(--sn-ui-highlight-primary-color);
+  --sn-ui-lbl-input-back-color: var(--sn-ui-back-primary-color);
+  --sn-ui-lbl-input-front-color: var(--sn-ui-front-primary-color);
 }
 
 .sn-labeled-input {
@@ -36,7 +36,7 @@
     border: 2px solid #888;
     border-radius: 8px;
     background: transparent;
-    color: var(--lbl-input-front-color);
+    color: var(--sn-ui-lbl-input-front-color);
   }
 
   & > [type="date"]:not(input:focus, .has-value[type="date"]) {
@@ -46,14 +46,14 @@
   }
 
   & > :is(input:focus, .has-value) {
-    border-color: var(--lbl-input-active-color);
+    border-color: var(--sn-ui-lbl-input-active-color);
 
     & ~ span {
       color: rgb(0 0 0 / 50%);
     }
 
     & ~ label {
-      background: var(--lbl-input-back-color);
+      background: var(--sn-ui-lbl-input-back-color);
       color: rgb(0 0 0 / 85%);
       translate: 0 -46px;
     }

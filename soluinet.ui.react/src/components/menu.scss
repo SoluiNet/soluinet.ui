@@ -1,19 +1,19 @@
 :root {
-  --menu-back-color: transparent;
-  --menu-content-back-color: var(--sn-ui-back-secondary-color);
-  --menu-content-button-back-color-first: var(--sn-ui-highlight-primary-color);
-  --menu-content-button-back-color-second: var(--sn-ui-highlight-secondary-color);
-  --menu-content-button-front-color: var(--sn-ui-highlight-front-color);
-  --menu-content-heading-front-color: var(--sn-ui-front-tertiary-color);
-  --menu-content-shadow-color: var(--sn-ui-back-tertiary-color);
-  --menu-front-color: var(--sn-ui-front-secondary-color);
-  --menu-overlay-back-color: var(--sn-ui-back-secondary-color);
+  --sn-ui-menu-back-color: transparent;
+  --sn-ui-menu-content-back-color: var(--sn-ui-back-secondary-color);
+  --sn-ui-menu-content-button-back-color-first: var(--sn-ui-highlight-primary-color);
+  --sn-ui-menu-content-button-back-color-second: var(--sn-ui-highlight-secondary-color);
+  --sn-ui-menu-content-button-front-color: var(--sn-ui-highlight-front-color);
+  --sn-ui-menu-content-heading-front-color: var(--sn-ui-front-tertiary-color);
+  --sn-ui-menu-content-shadow-color: var(--sn-ui-back-tertiary-color);
+  --sn-ui-menu-front-color: var(--sn-ui-front-secondary-color);
+  --sn-ui-menu-overlay-back-color: var(--sn-ui-back-secondary-color);
 }
 
 .sn-menu {
   aside {
-    background: var(--menu-content-back-color);
-    box-shadow: 0 0 20px var(--menu-content-shadow-color);
+    background: var(--sn-ui-menu-content-back-color);
+    box-shadow: 0 0 20px var(--sn-ui-menu-content-shadow-color);
     height: 100%;
     padding: 20px;
     position: fixed;
@@ -31,10 +31,10 @@
     }
 
     button {
-      background: linear-gradient(-60deg, var(--menu-content-button-back-color-first), var(--menu-content-button-back-color-second));
+      background: linear-gradient(-60deg, var(--sn-ui-menu-content-button-back-color-first), var(--sn-ui-menu-content-button-back-color-second));
       border: 0;
       border-radius: 30px;
-      color: var(--menu-content-button-front-color);
+      color: var(--sn-ui-menu-content-button-front-color);
       font-family: inherit;
       font-size: 16px;
       height: 60px;
@@ -42,7 +42,7 @@
     }
 
     h3 {
-      color: var(--menu-content-heading-front-color);
+      color: var(--sn-ui-menu-content-heading-front-color);
       font-size: 16px;
       font-weight: 400;
       margin: 40px 0 10px;
@@ -50,9 +50,9 @@
   }
 
   .burger {
-    background: var(--menu-back-color);
+    background: var(--sn-ui-menu-back-color);
     border: 0;
-    color: var(--menu-front-color);
+    color: var(--sn-ui-menu-front-color);
     cursor: pointer;
     display: grid;
     font-size: 30px;
@@ -93,7 +93,7 @@
 
   .overlay {
     backdrop-filter: blur(6px);
-    background: var(--menu-overlay-back-color);
+    background: var(--sn-ui-menu-overlay-back-color);
     bottom: 0;
     left: 0;
     opacity: 0;
