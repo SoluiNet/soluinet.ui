@@ -16,7 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.62.0",
     "commitlint": "^17.7.1",
-    "conventional-changelog-atom": "^3.0.0",
+    "conventional-changelog-atom": "^4.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.47.0",
     "husky": "^8.0.3",
