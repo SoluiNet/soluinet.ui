@@ -8,7 +8,7 @@
     "cm": "cz"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.2.0",
+    "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/format": "^18.4.4",
     "@commitlint/prompt-cli": "^18.2.0",
