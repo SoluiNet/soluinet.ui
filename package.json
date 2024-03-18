@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
-    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/config-conventional": "^19.1.0",
     "@commitlint/format": "^18.4.4",
     "@commitlint/prompt-cli": "^19.0.3",
     "@commitlint/types": "^18.1.0",
